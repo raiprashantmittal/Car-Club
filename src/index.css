@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base theme */
+:root {
+  --card-bg: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.04);
+}
+html, body, #root { height: 100%; }
+body.dark { background: linear-gradient(180deg,#0b1220,#04060a); color: #e6eef8; }
+body { transition: background 0.3s ease, color 0.3s ease; }
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+
+.nav-blur { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.btn-grad {
+  background: linear-gradient(to right, #06b6d4, #8b5cf6);
+  color: white;
+}
+.transition-fast { transition: all .18s ease; }
+
+
